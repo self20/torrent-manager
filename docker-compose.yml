@@ -1,0 +1,12 @@
+version: "2"
+services:
+  node:
+    volumes:
+      - ./:/usr/src/app
+    image: node:7-alpine
+    working_dir: /usr/src/app
+    ports:
+      - 8080:80
+    entrypoint:
+      - npm
+      - start
